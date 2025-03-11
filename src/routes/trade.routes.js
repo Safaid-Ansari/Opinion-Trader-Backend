@@ -1,6 +1,7 @@
 const express = require("express");
 const { placeTrade, getUserTrades, settleTrades } = require("../controllers/trade.controller");
 const { authMiddleware, adminMiddleware } = require("../middleware/auth.middleware");
+const { placeTradeValidator } = require("../validation/trade.validator");
 
 const router = express.Router();
 
@@ -10,6 +11,7 @@ router
     .route('/')
     .post(
         authMiddleware,
+        placeTradeValidator,
         placeTrade);
 
 // protected routes for retrieving user trades

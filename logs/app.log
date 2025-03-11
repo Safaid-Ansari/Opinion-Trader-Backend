@@ -17,3 +17,60 @@
 2025-03-11T11:07:11.915Z [INFO]: Server running on port 4500
 2025-03-11T11:07:43.722Z [INFO]: MongoDB connected successfully!
 2025-03-11T11:07:43.724Z [INFO]: Server running on port 4500
+2025-03-11T11:09:46.807Z [INFO]: MongoDB connected successfully!
+2025-03-11T11:09:46.809Z [INFO]: Server running on port 4500
+2025-03-11T11:11:39.385Z [INFO]: MongoDB connected successfully!
+2025-03-11T11:11:39.394Z [INFO]: Server running on port 4500
+2025-03-11T11:12:22.381Z [INFO]: MongoDB connected successfully!
+2025-03-11T11:12:22.384Z [INFO]: Server running on port 4500
+2025-03-11T11:12:31.606Z [INFO]: MongoDB connected successfully!
+2025-03-11T11:12:31.608Z [INFO]: Server running on port 4500
+2025-03-11T11:12:54.929Z [INFO]: MongoDB connected successfully!
+2025-03-11T11:12:54.932Z [INFO]: Server running on port 4500
+2025-03-11T11:13:02.265Z [INFO]: MongoDB connected successfully!
+2025-03-11T11:13:02.267Z [INFO]: Server running on port 4500
+2025-03-11T11:13:04.345Z [INFO]: MongoDB connected successfully!
+2025-03-11T11:13:04.348Z [INFO]: Server running on port 4500
+2025-03-11T11:13:33.054Z [INFO]: MongoDB connected successfully!
+2025-03-11T11:13:33.062Z [INFO]: Server running on port 4500
+2025-03-11T11:13:34.227Z [INFO]: MongoDB connected successfully!
+2025-03-11T11:13:34.230Z [INFO]: Server running on port 4500
+2025-03-11T11:13:43.777Z [INFO]: MongoDB connected successfully!
+2025-03-11T11:13:43.784Z [INFO]: Server running on port 4500
+2025-03-11T11:13:59.040Z [INFO]: MongoDB connected successfully!
+2025-03-11T11:13:59.042Z [INFO]: Server running on port 4500
+2025-03-11T11:14:56.716Z [INFO]: MongoDB connected successfully!
+2025-03-11T11:14:56.725Z [INFO]: Server running on port 4500
+2025-03-11T11:15:36.514Z [INFO]: MongoDB connected successfully!
+2025-03-11T11:15:36.523Z [INFO]: Server running on port 4500
+2025-03-11T11:16:17.719Z [INFO]: User created: Mursalin Ansari
+2025-03-11T11:16:25.950Z [ERROR]: Error: Expected double-quoted property name in JSON at position 41
+2025-03-11T11:16:37.490Z [INFO]: User saidansari07@gmail.com logged in successfully
+2025-03-11T11:17:06.100Z [INFO]: MongoDB connected successfully!
+2025-03-11T11:17:06.103Z [INFO]: Server running on port 4500
+2025-03-11T11:18:21.503Z [INFO]: MongoDB connected successfully!
+2025-03-11T11:18:21.506Z [INFO]: Server running on port 4500
+2025-03-11T11:18:24.317Z [INFO]: MongoDB connected successfully!
+2025-03-11T11:18:24.319Z [INFO]: Server running on port 4500
+2025-03-11T11:18:30.820Z [INFO]: MongoDB connected successfully!
+2025-03-11T11:18:30.829Z [INFO]: Server running on port 4500
+2025-03-11T11:18:51.091Z [INFO]: MongoDB connected successfully!
+2025-03-11T11:18:51.093Z [INFO]: Server running on port 4500
+2025-03-11T11:19:07.199Z [INFO]: MongoDB connected successfully!
+2025-03-11T11:19:07.207Z [INFO]: Server running on port 4500
+2025-03-11T11:19:38.518Z [INFO]: MongoDB connected successfully!
+2025-03-11T11:19:38.527Z [INFO]: Server running on port 4500
+2025-03-11T11:19:43.721Z [INFO]: MongoDB connected successfully!
+2025-03-11T11:19:43.723Z [INFO]: Server running on port 4500
+2025-03-11T11:19:54.966Z [INFO]: MongoDB connected successfully!
+2025-03-11T11:19:54.968Z [INFO]: Server running on port 4500
+2025-03-11T11:20:07.332Z [INFO]: MongoDB connected successfully!
+2025-03-11T11:20:07.335Z [INFO]: Server running on port 4500
+2025-03-11T11:20:13.674Z [INFO]: MongoDB connected successfully!
+2025-03-11T11:20:13.677Z [INFO]: Server running on port 4500
+2025-03-11T11:20:23.178Z [ERROR]: [POST /api/trades/settle] Access Forbidden - user
+2025-03-11T11:20:50.864Z [INFO]: MongoDB connected successfully!
+2025-03-11T11:20:50.924Z [INFO]: Server running on port 4500
+2025-03-11T11:21:07.938Z [INFO]: User 67cfb74e910964b6a25618b0 placed trade on event d2c90b3d104908d407729d089ee1616d
+2025-03-11T11:21:16.706Z [INFO]: User 67cfb74e910964b6a25618b0 placed trade on event d2c90b3d104908d407729d089ee1616d
+2025-03-11T11:21:17.570Z [WARN]: User 67cfb74e910964b6a25618b0 has insufficient balance
