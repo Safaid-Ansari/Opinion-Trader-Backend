@@ -23,7 +23,8 @@ The Opinion Trading App backend uses Node.js (Express.js) with MongoDB, Socket.i
 
 
 ## Project Structure
-opinion-trading-app
+```
+Opinion-Trader-Backend
 │── src
 │   ├── config
 │   │   ├── db.js           # MongoDB Connection
@@ -50,6 +51,8 @@ opinion-trading-app
 │── .env
 │── package.json
 │── README.md
+
+```
 
 
 ## Environment Variables (.env)
@@ -91,8 +94,8 @@ opinion-trading-app
 ## Setup & Run the Project
 
 1️ Clone the Repository
-- git clone https://github.com/your-username/opinion-trading-app.git
-- cd opinion-trading-app
+- git clone https://github.com/Safaid-Ansari/Opinion-Trader-Backend.git
+- cd Opinion-Trader-Backend
 
 2️ Install Dependencies
 -  npm install
