@@ -3,6 +3,9 @@
 ## Description
 The Opinion Trading App backend uses Node.js (Express.js) with MongoDB, Socket.io, and JWT authentication. It provides real-time sports event data, allows users to place trades, and enables trade settlements by admins.
 
+## HOSTED API URL
+### https://opinion-trader-backend.onrender.com/
+
 ## Features
 - User Authentication (JWT-based login & signup)
 - Admin Panel (Manage events & settle trades)
