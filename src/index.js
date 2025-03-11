@@ -3,17 +3,16 @@ const dotenv = require("dotenv");
 const http = require("http");
 const cors = require("cors");
 dotenv.config();
+const PORT = process.env.PORT || 5000;
 const bodyParser = require('body-parser')
 const connectDB = require("./config/db");
 const logger = require("./config/logger");
 const { initializeSocket } = require("./config/socket");
 const { fetchSportsData } = require('./utils/fetchSportsData')
 const errorHandler = require("./middleware/error.middleware");
-const PORT = process.env.PORT || 5000;
 const authRoutes = require("./routes/auth.routes");
 const eventRoutes = require("./routes/event.routes");
 const tradeRoutes = require("./routes/trade.routes");
-// Initialize Express app
 const app = express();
 
 // Middleware
@@ -39,9 +38,9 @@ const pushLiveUpdates = async () => {
 };
 
 // Update live events every 30 seconds
-setInterval(pushLiveUpdates, 30000);
+// setInterval(pushLiveUpdates, 30000);
 
-// Add this line below middleware
+// routes
 app.use("/api/auth", authRoutes);
 app.use("/api/events", eventRoutes);
 app.use("/api/trades", tradeRoutes);

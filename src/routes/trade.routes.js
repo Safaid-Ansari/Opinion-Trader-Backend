@@ -4,8 +4,27 @@ const { authMiddleware, adminMiddleware } = require("../middleware/auth.middlewa
 
 const router = express.Router();
 
-router.post("/", authMiddleware, placeTrade); // Place a trade
-router.get("/", authMiddleware, getUserTrades); // Get user's trades
-router.post("/settle", authMiddleware, adminMiddleware, settleTrades); // Admin settles trades
+
+// protected routes for placing trades
+router
+    .route('/')
+    .post(
+        authMiddleware,
+        placeTrade);
+
+// protected routes for retrieving user trades
+router
+    .route('/')
+    .get(
+        authMiddleware,
+        getUserTrades);
+
+// Admin routes for settling trades
+router
+    .route('/settle')
+    .post(
+        authMiddleware,
+        adminMiddleware,
+        settleTrades);
 
 module.exports = router;
