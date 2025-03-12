@@ -10,21 +10,34 @@ const generateToken = (user) => {
 const register = async (req, res) => {
     try {
         const { name, email, password } = req.body;
-        let user = await User.findOne({ email });
 
+        // Check for existing user
+        let user = await User.findOne({ email });
         if (user) {
-            logger.warn(`User already exists`);
+            logger.warn(`[${req.method} ${req.originalUrl}] Registration Failed - Email Already Exists`);
             return res.status(400).json({ message: "User already exists" });
         }
 
-        user = await User.create({ name, email, password });
-        logger.info(`User created: ${user.name}`);
-        res.status(201).json({ token: generateToken(user), user });
+        // Create new user
+        user = new User({ name, email, password });
+        await user.save();
+
+        logger.info(`[${req.method} ${req.originalUrl}] User Registered Successfully - ${user.email}`);
+
+        // Generate token and respond
+        res.status(201).json({ token: generateToken(user), user: { id: user._id, name: user.name, email: user.email } });
+
     } catch (error) {
-        logger.error(`Error in register user!: ${error.message}`);
-        res.status(500).json({ message: error.message });
+        logger.error(`[${req.method} ${req.originalUrl}] Registration Error - ${error.message}`);
+
+        // Handle duplicate key error from MongoDB
+        if (error.code === 11000) {
+            return res.status(400).json({ message: "Email already registered" });
+        }
+
+        res.status(500).json({ message: "Internal Server Error" });
     }
-};
+}
 
 // Login User
 const login = async (req, res) => {
@@ -36,11 +49,17 @@ const login = async (req, res) => {
             return res.status(400).json({ message: "Invalid credentials" });
         }
 
-        logger.info(`User ${user.email} logged in successfully`);
-        res.json({ token: generateToken(user), user });
+        // Log successful login
+        logger.info(`[${req.method} ${req.originalUrl}] User Logged In - ${user.email}`);
+
+        // Send response with token
+        res.json({
+            token: generateToken(user),
+            user: { id: user._id, name: user.name, email: user.email, role: user.role },
+        });
     } catch (error) {
-        logger.error(`Error in login user!: ${error.message}`);
-        res.status(500).json({ message: error.message });
+        logger.error(`[${req.method} ${req.originalUrl}] Login Error - ${error.message}`);
+        res.status(500).json({ message: "Internal Server Error" });
     }
 };
 
