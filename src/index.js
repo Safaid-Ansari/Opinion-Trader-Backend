@@ -37,8 +37,8 @@ const pushLiveUpdates = async () => {
     }
 };
 
-// Update live events every 30 seconds
-// setInterval(pushLiveUpdates, 30000);
+// Update live events every 30 seconds 
+// setInterval(pushLiveUpdates, 30000); // why i comment this because we have only limited api calls for free version if it will run every 30 seconds then quota will be left within less than one hour
 
 // routes
 app.use("/api/auth", authRoutes);
